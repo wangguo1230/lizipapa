@@ -3,3 +3,4 @@ playwright
 loguru
 pydantic
 pyotp
+playwright-stealth

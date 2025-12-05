@@ -2,8 +2,8 @@
 
 BASE_URL = 'https://x.com/i/api'
 
-# GraphQL Endpoints and Query IDs
-# Mapped from twitter_reference/api/web-api/constants.ts
+# GraphQL 端点和 Query ID 映射
+# 这些 ID 可能会随 Twitter 更新而变化，需要定期维护
 GRAPHQL_ENDPOINTS = {
     'UserTweets': '/graphql/E3opETHurmVJflFsUBVuUQ/UserTweets',
     'UserByScreenName': '/graphql/Yka-W8dz7RaEuQNkroPkYw/UserByScreenName',
@@ -15,11 +15,10 @@ GRAPHQL_ENDPOINTS = {
     'SearchTimeline': '/graphql/UN1i3zUiCWa-6r-Uaho4fw/SearchTimeline',
     'ListLatestTweetsTimeline': '/graphql/Pa45JvqZuKcW1plybfgBlQ/ListLatestTweetsTimeline',
     'TweetDetail': '/graphql/QuBlQ6SxNAQCt6-kBiCXCQ/TweetDetail',
-    'Likes': '/graphql/k5XapwcSikNsEsRLWkdFvA/Likes', # Added based on common knowledge or need to find in reference if missing
+    'Likes': '/graphql/k5XapwcSikNsEsRLWkdFvA/Likes',
 }
 
-# Features
-# Mapped from twitter_reference/api/web-api/constants.ts
+# 用户查询相关的功能开关 (Features)
 GQL_FEATURE_USER = {
     "hidden_profile_subscriptions_enabled": True,
     "rweb_tipjar_consumption_enabled": True,
@@ -35,6 +34,7 @@ GQL_FEATURE_USER = {
     "responsive_web_graphql_timeline_navigation_enabled": True,
 }
 
+# 时间线/推文列表相关的功能开关
 GQL_FEATURE_FEED = {
     "rweb_tipjar_consumption_enabled": True,
     "responsive_web_graphql_exclude_directive_enabled": True,
@@ -61,6 +61,7 @@ GQL_FEATURE_FEED = {
     "responsive_web_enhance_cards_enabled": False,
 }
 
+# 推文详情页的功能开关
 TWEET_DETAIL_FEATURES = {
     "rweb_tipjar_consumption_enabled": True,
     "responsive_web_graphql_exclude_directive_enabled": True,
@@ -87,6 +88,7 @@ TWEET_DETAIL_FEATURES = {
     "responsive_web_enhance_cards_enabled": False,
 }
 
+# 功能开关映射表
 GQL_FEATURES = {
     "UserByScreenName": GQL_FEATURE_USER,
     "UserByRestId": GQL_FEATURE_USER,
@@ -101,4 +103,5 @@ GQL_FEATURES = {
     "Likes": GQL_FEATURE_FEED,
 }
 
+# 固定 Bearer Token (Twitter Web App 通用)
 BEARER_TOKEN = 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA'
